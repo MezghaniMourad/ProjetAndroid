@@ -17,6 +17,8 @@ import com.example.projetjava.R;
 public class Acceuil extends Fragment {
 
     Button b1;
+    Button b2;
+    Button b3;
     public Acceuil() {
         // Required empty public constructor
     }
@@ -28,18 +30,31 @@ public class Acceuil extends Fragment {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_acceuil, container, false);
         b1= v.findViewById(R.id.bottn_liste);
+        b2= v.findViewById(R.id.bottn_ajouter);
+        b3= v.findViewById(R.id.bottn_quitter);
         b1.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 //Liste liste = new Liste();
                 //FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
                 //transaction.replace(R.id.Acceuil,liste);
                 //transaction.commit();
+                Liste p = new Liste();
+
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.exit(0);
             }
         });
         return  v;
-    }
-
-    public void test1(View v){
-
     }
 }
